@@ -123,7 +123,7 @@ RG_LAPTOP_CALL
     ${runStatus}=  Run Keyword And Return Status  Should Not Contain Any  ${stdoutput}  Error   FAIL  msg= Fail at RG_Laptop log  ignore_case=True 
     Log To Console    \n RG LAPTOP LOG STATUS: ${runStatus} 
     sleep  2
-    #################################################################################### 
+    ######################################################################################### 
 
     ##### Get files from RG laptop
     ${Remote_folder_files}     SSH.List Files In Directory    ${remote_log_folder}
