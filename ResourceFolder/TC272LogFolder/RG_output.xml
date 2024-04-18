@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.9.13 on win32)" generated="2024-04-11T20:45:22.587798" rpa="false" schemaversion="5">
+<suite id="s1" name="RG laptop" source="C:\Users\homeD\Desktop\DSL\RG_laptop.robot">
+<test id="s1-t1" name="WAN Connection Test" line="15">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-11T20:45:23.518746" level="INFO">Opening browser 'firefox' to base url 'http://192.168.254.254'.</msg>
+<msg time="2024-04-11T20:45:23.518746" level="INFO">Browser driver log file created to: C:\Users\homeD\Desktop\DSL\Log_Folder\nul</msg>
+<arg>http://192.168.254.254</arg>
+<arg>firefox</arg>
+<arg>service_log_path=${{os.path.devnull}}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-11T20:45:23.516748" elapsed="13.257674"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-11T20:45:36.775423" elapsed="0.018984"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>//button[@id='button-blue']</arg>
+<arg>10s</arg>
+<arg>wait 10s or until webpage launched and contain 'Login'</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-04-11T20:45:36.795415" elapsed="0.136914"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-11T20:45:38.943234" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-04-11T20:45:36.933328" elapsed="2.009906"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-11T20:45:38.945276" level="INFO">Clicking element '//*[@id="name"]'.</msg>
+<arg>//*[@id="name"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-11T20:45:38.944277" elapsed="0.368611"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-11T20:45:41.315896" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-04-11T20:45:39.312888" elapsed="2.003008"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-11T20:45:41.317937" level="INFO">Typing text 'admin' into text field '//*[@id="name"]'.</msg>
+<arg>//*[@id="name"]</arg>
+<arg>${userName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-11T20:45:41.316940" elapsed="0.066960"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-11T20:45:43.387618" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-04-11T20:45:41.384900" elapsed="2.002718"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-04-11T20:45:43.389624" level="INFO">Typing password into text field '//input[@id='password']'.</msg>
+<msg time="2024-04-11T20:45:43.417179" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>//input[@id='password']</arg>
+<arg>${passWord}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-11T20:45:43.388626" elapsed="0.075043"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-11T20:45:46.466377" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-04-11T20:45:43.464697" elapsed="3.001680"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-04-11T20:45:46.468419" level="INFO">Clicking button '//button[@id='button-blue']'.</msg>
+<arg>//button[@id='button-blue']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-11T20:45:46.467421" elapsed="0.282359"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Information &amp; Settings</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-04-11T20:45:46.749780" elapsed="1.150949"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-11T20:45:51.903696" level="INFO">Slept 4 seconds.</msg>
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-04-11T20:45:47.901731" elapsed="4.001965"/>
+</kw>
+<kw name="Set Screenshot Directory" owner="SeleniumLibrary">
+<arg>C:/Users/homed/Desktop/DSL/Log_Folder</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" start="2024-04-11T20:45:51.904740" elapsed="0.000998"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-04-11T20:45:52.012677" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../../../homed/Desktop/DSL/Log_Folder/wanConn.png"&gt;&lt;img src="../../../../homed/Desktop/DSL/Log_Folder/wanConn.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>wanConn.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-04-11T20:45:51.906738" elapsed="0.106938"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-11T20:45:55.024080" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-04-11T20:45:52.014675" elapsed="3.009405"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-04-11T20:45:55.071097" level="FAIL">Element '//*[@id="head-container"]/div/div[3]/div[1]/div[1]/div[2]/span' should have contained text 'Connected' but its text was 'Disconnected'.</msg>
+<arg>//*[@id="head-container"]/div/div[3]/div[1]/div[1]/div[2]/span</arg>
+<arg>Connected</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="FAIL" start="2024-04-11T20:45:55.026122" elapsed="0.049972">Element '//*[@id="head-container"]/div/div[3]/div[1]/div[1]/div[2]/span' should have contained text 'Connected' but its text was 'Disconnected'.</status>
+</kw>
+<arg>Element Should Contain</arg>
+<arg>//*[@id="head-container"]/div/div[3]/div[1]/div[1]/div[2]/span</arg>
+<arg>Connected</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="FAIL" start="2024-04-11T20:45:55.025124" elapsed="0.050970">Element '//*[@id="head-container"]/div/div[3]/div[1]/div[1]/div[2]/span' should have contained text 'Connected' but its text was 'Disconnected'.</status>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-11T20:45:57.091668" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-04-11T20:45:55.077093" elapsed="2.014575"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-04-11T20:45:57.130691" level="INFO">Element '//*[@id="head-container"]/div/div[3]/div[1]/div[1]/div[3]/span' contains text 'ADSL'.</msg>
+<arg>//*[@id="head-container"]/div/div[3]/div[1]/div[1]/div[3]/span</arg>
+<arg>ADSL</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-04-11T20:45:57.093710" elapsed="0.037980"/>
+</kw>
+<arg>Element Should Contain</arg>
+<arg>//*[@id="head-container"]/div/div[3]/div[1]/div[1]/div[3]/span</arg>
+<arg>ADSL</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="PASS" start="2024-04-11T20:45:57.092712" elapsed="0.038978"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-11T20:45:58.142261" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-04-11T20:45:57.132690" elapsed="1.009571"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-04-11T20:45:58.183281" level="FAIL">Element '//*[@id="head-container"]/div/div[3]/div[1]/div[2]/div/span' should have contained text 'PPPOE' but its text was 'DETECTING'.</msg>
+<arg>//*[@id="head-container"]/div/div[3]/div[1]/div[2]/div/span</arg>
+<arg>PPPOE</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="FAIL" start="2024-04-11T20:45:58.144304" elapsed="0.039977">Element '//*[@id="head-container"]/div/div[3]/div[1]/div[2]/div/span' should have contained text 'PPPOE' but its text was 'DETECTING'.</status>
+</kw>
+<arg>Element Should Contain</arg>
+<arg>//*[@id="head-container"]/div/div[3]/div[1]/div[2]/div/span</arg>
+<arg>PPPOE</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="FAIL" start="2024-04-11T20:45:58.143304" elapsed="0.040977">Element '//*[@id="head-container"]/div/div[3]/div[1]/div[2]/div/span' should have contained text 'PPPOE' but its text was 'DETECTING'.</status>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-11T20:45:59.191281" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-04-11T20:45:58.185280" elapsed="1.006001"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-11T20:45:59.193324" level="INFO">Clicking element '//h6[normalize-space()='Broadband &amp; Internet']'.</msg>
+<arg>//h6[normalize-space()='Broadband &amp; Internet']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-11T20:45:59.192297" elapsed="0.252024"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>IPv4</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-04-11T20:45:59.445321" elapsed="0.238827"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-11T20:46:01.698738" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-04-11T20:45:59.685148" elapsed="2.013590"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-11T20:46:01.700734" level="INFO">Clicking element '//a[normalize-space()='Statistics']'.</msg>
+<arg>//a[normalize-space()='Statistics']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-11T20:46:01.699733" elapsed="0.264068"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Statistics</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-04-11T20:46:01.964801" elapsed="0.014957"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-11T20:46:09.985733" level="INFO">Slept 8 seconds.</msg>
+<arg>8s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-04-11T20:46:01.981756" elapsed="8.003977"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-04-11T20:46:10.028753" level="INFO">Element '//*[@id="xdsl-table"]/tbody/tr[1]/td' contains text 'ADSL'.</msg>
+<arg>//*[@id="xdsl-table"]/tbody/tr[1]/td</arg>
+<arg>ADSL</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-04-11T20:46:09.987775" elapsed="0.041976"/>
+</kw>
+<arg>Element Should Contain</arg>
+<arg>//*[@id="xdsl-table"]/tbody/tr[1]/td</arg>
+<arg>ADSL</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="PASS" start="2024-04-11T20:46:09.986777" elapsed="0.042974"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-11T20:46:11.033137" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-04-11T20:46:10.030750" elapsed="1.002387"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-04-11T20:46:11.075156" level="INFO">Element '//*[@id="xdsl-table"]/tbody/tr[2]/td' contains text 'ATM'.</msg>
+<arg>//*[@id="xdsl-table"]/tbody/tr[2]/td</arg>
+<arg>ATM</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-04-11T20:46:11.035179" elapsed="0.040977"/>
+</kw>
+<arg>Element Should Contain</arg>
+<arg>//*[@id="xdsl-table"]/tbody/tr[2]/td</arg>
+<arg>ATM</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="PASS" start="2024-04-11T20:46:11.034180" elapsed="0.041976"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-11T20:46:12.081582" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-04-11T20:46:11.077155" elapsed="1.004427"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-04-11T20:46:12.124601" level="FAIL">Element '//*[@id="xdsl-table"]/tbody/tr[3]/td' should have contained text 'G_992_5_ANNEX_A' but its text was 'G_992_1_ANNEX_A'.</msg>
+<arg>//*[@id="xdsl-table"]/tbody/tr[3]/td</arg>
+<arg>G_992_5_ANNEX_A</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="FAIL" start="2024-04-11T20:46:12.083624" elapsed="0.041976">Element '//*[@id="xdsl-table"]/tbody/tr[3]/td' should have contained text 'G_992_5_ANNEX_A' but its text was 'G_992_1_ANNEX_A'.</status>
+</kw>
+<arg>Element Should Contain</arg>
+<arg>//*[@id="xdsl-table"]/tbody/tr[3]/td</arg>
+<arg>G_992_5_ANNEX_A</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="FAIL" start="2024-04-11T20:46:12.082625" elapsed="0.042975">Element '//*[@id="xdsl-table"]/tbody/tr[3]/td' should have contained text 'G_992_5_ANNEX_A' but its text was 'G_992_1_ANNEX_A'.</status>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-11T20:46:13.129279" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-04-11T20:46:12.126600" elapsed="1.002679"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-04-11T20:46:13.171300" level="INFO">Element '//*[@id="xdsl-table"]/tbody/tr[4]/td' contains text 'Showtime'.</msg>
+<arg>//*[@id="xdsl-table"]/tbody/tr[4]/td</arg>
+<arg>Showtime</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-04-11T20:46:13.131323" elapsed="0.040977"/>
+</kw>
+<arg>Element Should Contain</arg>
+<arg>//*[@id="xdsl-table"]/tbody/tr[4]/td</arg>
+<arg>Showtime</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="PASS" start="2024-04-11T20:46:13.130325" elapsed="0.041975"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-11T20:46:14.174601" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-04-11T20:46:13.173300" elapsed="1.001301"/>
+</kw>
+<kw name="Get Horizontal Position" owner="SeleniumLibrary">
+<msg time="2024-04-11T20:46:14.191637" level="INFO">${x-location} = 58</msg>
+<var>${x-location}</var>
+<arg>//h4[normalize-space()='Statistics - xDSL']</arg>
+<doc>Returns the horizontal position of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-11T20:46:14.175646" elapsed="0.015991"/>
+</kw>
+<kw name="Get Vertical Position" owner="SeleniumLibrary">
+<msg time="2024-04-11T20:46:14.205628" level="INFO">${y-location} = 971</msg>
+<var>${y-location}</var>
+<arg>//h4[normalize-space()='Statistics - xDSL']</arg>
+<doc>Returns the vertical position of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-11T20:46:14.192635" elapsed="0.013993"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-04-11T20:46:14.209626" level="INFO">Executing JavaScript:
+window.scrollTo(58, 971 )
+Without any arguments.</msg>
+<arg>window.scrollTo(${x-location}, ${y-location} )</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-04-11T20:46:14.207600" elapsed="0.018980"/>
+</kw>
+<kw name="Set Screenshot Directory" owner="SeleniumLibrary">
+<arg>C:\\Users\\homed\\Desktop\\DSL\\Log_Folder</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" start="2024-04-11T20:46:14.227616" elapsed="0.001999"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-04-11T20:46:14.417507" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../../../homed/Desktop/DSL/Log_Folder/Statistic.png"&gt;&lt;img src="../../../../homed/Desktop/DSL/Log_Folder/Statistic.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>Statistic.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-04-11T20:46:14.230578" elapsed="0.186929"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-11T20:46:15.426959" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-04-11T20:46:14.418507" elapsed="1.008452"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-11T20:46:15.428966" level="INFO">Clicking element '//a[normalize-space()='Speed Test']'.</msg>
+<arg>//a[normalize-space()='Speed Test']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-11T20:46:15.427969" elapsed="0.252165"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@id="speedServer"]/select</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-11T20:46:15.680134" elapsed="2.455803"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-11T20:46:18.137927" level="INFO">Clicking element '//option[contains(text(),'Miami')]'.</msg>
+<msg time="2024-04-11T20:46:18.144922" level="FAIL">Element with locator '//option[contains(text(),'Miami')]' not found.</msg>
+<arg>//option[contains(text(),'${serverSite}')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2024-04-11T20:46:18.136962" elapsed="0.010958">Element with locator '//option[contains(text(),'Miami')]' not found.</status>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-04-11T20:46:18.148919" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//button[@value='START']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-04-11T20:46:18.149919" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-04-11T20:46:18.149919" elapsed="0.001001"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>//button[@value='START']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-04-11T20:46:18.150920" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//div[@class='brand']</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-04-11T20:46:18.151917" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>//div[@class='brand']</arg>
+<arg>60s</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="NOT RUN" start="2024-04-11T20:46:18.152917" elapsed="0.000000"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<var>${totalRow}</var>
+<arg>//tbody/tr</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="NOT RUN" start="2024-04-11T20:46:18.152917" elapsed="0.000000"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<var>${totalCol}</var>
+<arg>//tbody/tr/th</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="NOT RUN" start="2024-04-11T20:46:18.153916" elapsed="0.000000"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<var>${downLoadSpeed}</var>
+<arg>//tbody/tr[2]/td[3]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-04-11T20:46:18.154915" elapsed="0.000000"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<var>${upLoadSpeed}</var>
+<arg>//tbody/tr[2]/td[4]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-04-11T20:46:18.154915" elapsed="0.001000"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<arg>window.scrollTo(0,document.body.scrollHeight)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" start="2024-04-11T20:46:18.155915" elapsed="0.000000"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<arg>SpeedTest-${serverSite}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2024-04-11T20:46:18.156914" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<var>${condition}</var>
+<arg>${upLoadSpeed} &gt; 0.5</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" start="2024-04-11T20:46:18.156914" elapsed="0.001000"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<arg>Should Be True</arg>
+<arg>${condition}</arg>
+<arg>Fail: ${serverSite} Upload Speed-${upLoadSpeed} should be higher than 0.5</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="NOT RUN" start="2024-04-11T20:46:18.157914" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<var>${condition}</var>
+<arg>${downLoadSpeed} &gt; 0.5</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" start="2024-04-11T20:46:18.158913" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<arg>Should Be True</arg>
+<arg>${condition}</arg>
+<arg>Fail: ${serverSite} Average Download Speed-${downLoadSpeed} should be higher than 0.5</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="NOT RUN" start="2024-04-11T20:46:18.159912" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-04-11T20:46:18.160912" elapsed="4.470387"/>
+</kw>
+<tag>Regression test</tag>
+<status status="FAIL" start="2024-04-11T20:45:23.511714" elapsed="59.119585">Several failures occurred:
+
+1) Element '//*[@id="head-container"]/div/div[3]/div[1]/div[1]/div[2]/span' should have contained text 'Connected' but its text was 'Disconnected'.
+
+2) Element '//*[@id="head-container"]/div/div[3]/div[1]/div[2]/div/span' should have contained text 'PPPOE' but its text was 'DETECTING'.
+
+3) Element '//*[@id="xdsl-table"]/tbody/tr[3]/td' should have contained text 'G_992_5_ANNEX_A' but its text was 'G_992_1_ANNEX_A'.
+
+4) Element with locator '//option[contains(text(),'Miami')]' not found.</status>
+</test>
+<status status="FAIL" start="2024-04-11T20:45:22.593794" elapsed="60.040540"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">Regression test</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="RG laptop">RG laptop</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,781 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.9.2 on win32)" generated="20240411 19:43:45.362" rpa="false" schemaversion="3">
+<suite id="s1" name="TC272" source="C:\Users\FrankOs\Desktop\CPE_Access\TestFolder\ADSL2+_Test\TC272.robot">
+<test id="s1-t1" name="Run All scripts" line="48">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>ADTRAN_CALL</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="ADTRAN_CALL" library="Action_keywords">
+<kw name="Register Keyword To Run On Failure" library="selen">
+<arg>NONE</arg>
+<doc>Sets the keyword to execute, when a SeleniumLibrary keyword fails.</doc>
+<msg timestamp="20240411 19:43:45.977" level="INFO">No keyword will be run on failure.</msg>
+<status status="PASS" starttime="20240411 19:43:45.977" endtime="20240411 19:43:45.977"/>
+</kw>
+<kw name="Open Browser" library="selen">
+<arg>${Adtran_IP}</arg>
+<arg>chrome</arg>
+<arg>service_log_path=${{os.path.devnull}}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240411 19:43:45.979" level="INFO">Opening browser 'chrome' to base url 'http://10.177.171.204'.</msg>
+<msg timestamp="20240411 19:43:45.979" level="INFO">Browser driver log file created to: C:\Users\FrankOs\Desktop\CPE_Access\TestFolder\ADSL2+_Test\ResourceFolder\TC272LogFolder\nul</msg>
+<status status="PASS" starttime="20240411 19:43:45.977" endtime="20240411 19:43:51.590"/>
+</kw>
+<kw name="Set Window Size" library="selen">
+<arg>1200</arg>
+<arg>1000</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" starttime="20240411 19:43:51.590" endtime="20240411 19:43:51.710"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="selen">
+<arg>//*[@id="LogoImage"]</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240411 19:43:51.711" endtime="20240411 19:43:51.726"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240411 19:43:52.741" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240411 19:43:51.726" endtime="20240411 19:43:52.741"/>
+</kw>
+<kw name="Input Text" library="selen">
+<arg>//*[@id="l_usrnm"]</arg>
+<arg>${Adtran_userName}</arg>
+<arg>clear=True</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240411 19:43:52.741" level="INFO">Typing text 'ADMIN' into text field '//*[@id="l_usrnm"]'.</msg>
+<status status="PASS" starttime="20240411 19:43:52.741" endtime="20240411 19:43:52.856"/>
+</kw>
+<kw name="Input Password" library="selen">
+<arg>//input[@id='l_pswrd']</arg>
+<arg>${Adtran_passWord}</arg>
+<arg>clear=True</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20240411 19:43:52.856" level="INFO">Typing password into text field '//input[@id='l_pswrd']'.</msg>
+<msg timestamp="20240411 19:43:52.882" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20240411 19:43:52.920" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20240411 19:43:52.856" endtime="20240411 19:43:52.920"/>
+</kw>
+<kw name="Click Element" library="selen">
+<arg>//input[@id='loginbutton']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240411 19:43:52.920" level="INFO">Clicking element '//input[@id='loginbutton']'.</msg>
+<status status="PASS" starttime="20240411 19:43:52.920" endtime="20240411 19:43:52.972"/>
+</kw>
+<kw name="Wait Until Page Contains" library="selen">
+<arg>ADMIN User Statistics</arg>
+<arg>20s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20240411 19:43:52.972" endtime="20240411 19:43:54.535"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240411 19:43:55.537" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240411 19:43:54.535" endtime="20240411 19:43:55.537"/>
+</kw>
+<kw name="Click Button" library="selen">
+<arg>//input[@id='overlay_ok']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240411 19:43:55.537" level="INFO">Clicking button '//input[@id='overlay_ok']'.</msg>
+<status status="PASS" starttime="20240411 19:43:55.537" endtime="20240411 19:44:00.420"/>
+</kw>
+<kw name="Wait Until Page Contains" library="selen">
+<arg>Total Access</arg>
+<arg>20s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20240411 19:44:00.420" endtime="20240411 19:44:00.436"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240411 19:44:03.443" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240411 19:44:00.436" endtime="20240411 19:44:03.443"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="selen">
+<arg>//*[@id="slot3"]</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240411 19:44:03.443" endtime="20240411 19:44:03.490"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240411 19:44:06.491" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240411 19:44:03.490" endtime="20240411 19:44:06.491"/>
+</kw>
+<kw name="Click Element" library="selen">
+<arg>//span[contains(text(), '${module}')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240411 19:44:06.491" level="INFO">Clicking element '//span[contains(text(), 'Combo V2')]'.</msg>
+<status status="PASS" starttime="20240411 19:44:06.491" endtime="20240411 19:44:21.619"/>
+</kw>
+<kw name="Wait Until Page Contains" library="selen">
+<arg>Configuration</arg>
+<arg>120s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20240411 19:44:21.619" endtime="20240411 19:44:21.653"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240411 19:44:24.662" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240411 19:44:21.653" endtime="20240411 19:44:24.662"/>
+</kw>
+<kw name="Click Element" library="selen">
+<arg>//*[@id="modNavA_Prov"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240411 19:44:24.662" level="INFO">Clicking element '//*[@id="modNavA_Prov"]'.</msg>
+<status status="PASS" starttime="20240411 19:44:24.662" endtime="20240411 19:44:29.545"/>
+</kw>
+<kw name="Wait Until Page Contains" library="selen">
+<arg>Card Provisioning</arg>
+<arg>30s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20240411 19:44:29.546" endtime="20240411 19:44:30.944"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240411 19:44:33.959" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240411 19:44:30.944" endtime="20240411 19:44:33.959"/>
+</kw>
+<kw name="Click Element" library="selen">
+<arg>//*[@id="ProvEvcMapPageTab_A"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240411 19:44:33.959" level="INFO">Clicking element '//*[@id="ProvEvcMapPageTab_A"]'.</msg>
+<status status="PASS" starttime="20240411 19:44:33.959" endtime="20240411 19:44:34.049"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="selen">
+<arg>//*[@id="evcmap_LastError1_Display"]</arg>
+<arg>30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240411 19:44:34.049" endtime="20240411 19:44:44.834"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240411 19:44:47.834" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240411 19:44:44.834" endtime="20240411 19:44:47.834"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${index}</var>
+<value>10</value>
+<iter>
+<var name="${index}">0</var>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${textCheck}</var>
+<arg>Page Should Contain</arg>
+<arg>${interfaceMap}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Page Should Contain" library="selen">
+<arg>${interfaceMap}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20240411 19:44:47.900" level="FAIL">Page should have contained text 'RR 3/2 ATM' but did not.</msg>
+<status status="FAIL" starttime="20240411 19:44:47.837" endtime="20240411 19:44:47.913"/>
+</kw>
+<msg timestamp="20240411 19:44:47.913" level="INFO">${textCheck} = False</msg>
+<status status="PASS" starttime="20240411 19:44:47.837" endtime="20240411 19:44:47.913"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\nText present: ${textCheck}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20240411 19:44:47.913" endtime="20240411 19:44:47.914"/>
+</kw>
+<if>
+<branch type="IF" condition="${textCheck} == True">
+<kw name="Click Element" library="selen">
+<arg>//a[contains(text(),'${interfaceMap}')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240411 19:44:47.914" endtime="20240411 19:44:47.914"/>
+</kw>
+<kw name="Wait Until Page Contains" library="selen">
+<arg>Edit Interface Map</arg>
+<arg>30s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20240411 19:44:47.915" endtime="20240411 19:44:47.915"/>
+</kw>
+<kw name="Exit For Loop" library="BuiltIn">
+<doc>Stops executing the enclosing FOR loop.</doc>
+<status status="NOT RUN" starttime="20240411 19:44:47.915" endtime="20240411 19:44:47.915"/>
+</kw>
+<status status="NOT RUN" starttime="20240411 19:44:47.914" endtime="20240411 19:44:47.915"/>
+</branch>
+<branch type="ELSE">
+<kw name="Click Element" library="selen">
+<arg>//*[@id="evcmapListTable_NextBtn"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240411 19:44:47.915" level="INFO">Clicking element '//*[@id="evcmapListTable_NextBtn"]'.</msg>
+<status status="PASS" starttime="20240411 19:44:47.915" endtime="20240411 19:44:47.968"/>
+</kw>
+<kw name="Wait Until Page Contains" library="selen">
+<arg>Running</arg>
+<arg>30s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20240411 19:44:47.968" endtime="20240411 19:44:55.225"/>
+</kw>
+<status status="PASS" starttime="20240411 19:44:47.915" endtime="20240411 19:44:55.225"/>
+</branch>
+<status status="PASS" starttime="20240411 19:44:47.914" endtime="20240411 19:44:55.225"/>
+</if>
+<status status="PASS" starttime="20240411 19:44:47.834" endtime="20240411 19:44:55.225"/>
+</iter>
+<iter>
+<var name="${index}">1</var>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${textCheck}</var>
+<arg>Page Should Contain</arg>
+<arg>${interfaceMap}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Page Should Contain" library="selen">
+<arg>${interfaceMap}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20240411 19:44:55.256" level="INFO">Current page contains text 'RR 3/2 ATM'.</msg>
+<status status="PASS" starttime="20240411 19:44:55.225" endtime="20240411 19:44:55.256"/>
+</kw>
+<msg timestamp="20240411 19:44:55.256" level="INFO">${textCheck} = True</msg>
+<status status="PASS" starttime="20240411 19:44:55.225" endtime="20240411 19:44:55.256"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\nText present: ${textCheck}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20240411 19:44:55.256" endtime="20240411 19:44:55.256"/>
+</kw>
+<if>
+<branch type="IF" condition="${textCheck} == True">
+<kw name="Click Element" library="selen">
+<arg>//a[contains(text(),'${interfaceMap}')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240411 19:44:55.256" level="INFO">Clicking element '//a[contains(text(),'RR 3/2 ATM')]'.</msg>
+<status status="PASS" starttime="20240411 19:44:55.256" endtime="20240411 19:44:55.328"/>
+</kw>
+<kw name="Wait Until Page Contains" library="selen">
+<arg>Edit Interface Map</arg>
+<arg>30s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20240411 19:44:55.328" endtime="20240411 19:44:58.903"/>
+</kw>
+<kw name="Exit For Loop" library="BuiltIn">
+<doc>Stops executing the enclosing FOR loop.</doc>
+<msg timestamp="20240411 19:44:58.903" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" starttime="20240411 19:44:58.903" endtime="20240411 19:44:58.904"/>
+</kw>
+<status status="PASS" starttime="20240411 19:44:55.256" endtime="20240411 19:44:58.904"/>
+</branch>
+<branch type="ELSE">
+<kw name="Click Element" library="selen">
+<arg>//*[@id="evcmapListTable_NextBtn"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240411 19:44:58.904" endtime="20240411 19:44:58.904"/>
+</kw>
+<kw name="Wait Until Page Contains" library="selen">
+<arg>Running</arg>
+<arg>30s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20240411 19:44:58.904" endtime="20240411 19:44:58.904"/>
+</kw>
+<status status="NOT RUN" starttime="20240411 19:44:58.904" endtime="20240411 19:44:58.904"/>
+</branch>
+<status status="PASS" starttime="20240411 19:44:55.256" endtime="20240411 19:44:58.904"/>
+</if>
+<status status="PASS" starttime="20240411 19:44:55.225" endtime="20240411 19:44:58.904"/>
+</iter>
+<status status="PASS" starttime="20240411 19:44:47.834" endtime="20240411 19:44:58.904"/>
+</for>
+<kw name="Get Element Attribute" library="selen">
+<var>${id_value}</var>
+<arg>//a[contains(text(),'${interfaceMap}')]</arg>
+<arg>id</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20240411 19:44:58.927" level="INFO">${id_value} = evcmapNames_15_Display</msg>
+<status status="PASS" starttime="20240411 19:44:58.904" endtime="20240411 19:44:58.927"/>
+</kw>
+<kw name="Get Regexp Matches" library="String">
+<var>${id_regexp}</var>
+<arg>${id_value}</arg>
+<arg>\\d+</arg>
+<doc>Returns a list of all non-overlapping matches in the given string.</doc>
+<msg timestamp="20240411 19:44:58.928" level="INFO">${id_regexp} = ['15']</msg>
+<status status="PASS" starttime="20240411 19:44:58.927" endtime="20240411 19:44:58.928"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${interfaceMapID}</var>
+<arg>${id_regexp}[0]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240411 19:44:58.928" level="INFO">${interfaceMapID} = 15</msg>
+<status status="PASS" starttime="20240411 19:44:58.928" endtime="20240411 19:44:58.928"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\nInterface Map ID for ${interfaceMap} group is: ${interfaceMapID}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20240411 19:44:58.928" endtime="20240411 19:44:58.929"/>
+</kw>
+<kw name="Get Text" library="selen">
+<var>${status}</var>
+<arg>//span[@id='evcmap_LastError${interfaceMapID}_Display']</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240411 19:44:58.954" level="INFO">${status} = Running</msg>
+<status status="PASS" starttime="20240411 19:44:58.929" endtime="20240411 19:44:58.954"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\Current status is : ${status}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20240411 19:44:58.954" endtime="20240411 19:44:58.955"/>
+</kw>
+<kw name="Run Keyword" library="BuiltIn">
+<arg>Should Be Equal As Strings</arg>
+<arg>${status}</arg>
+<arg>Running</arg>
+<arg>Fail: ${interfaceMap} status in not "Running"</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${status}</arg>
+<arg>Running</arg>
+<arg>Fail: ${interfaceMap} status in not "Running"</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20240411 19:44:58.955" endtime="20240411 19:44:58.955"/>
+</kw>
+<status status="PASS" starttime="20240411 19:44:58.955" endtime="20240411 19:44:58.955"/>
+</kw>
+<kw name="Select From List By Label" library="selen">
+<arg>//select[@id='EVCMapAdminStatus']</arg>
+<arg>${serviceState}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20240411 19:44:58.956" level="INFO">Selecting options from selection list '//select[@id='EVCMapAdminStatus']' by label Active.</msg>
+<status status="PASS" starttime="20240411 19:44:58.955" endtime="20240411 19:44:59.031"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240411 19:45:00.041" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240411 19:44:59.032" endtime="20240411 19:45:00.041"/>
+</kw>
+<kw name="Select From List By Label" library="selen">
+<arg>//select[@id='EVCMapIPHost']</arg>
+<arg>${port}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20240411 19:45:00.042" level="INFO">Selecting options from selection list '//select[@id='EVCMapIPHost']' by label 1/3/2.</msg>
+<status status="PASS" starttime="20240411 19:45:00.041" endtime="20240411 19:45:00.099"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240411 19:45:01.106" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240411 19:45:00.099" endtime="20240411 19:45:01.106"/>
+</kw>
+<kw name="Select From List By Label" library="selen">
+<arg>//select[@id='EVCMapEvcName']</arg>
+<arg>${EVC_name}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20240411 19:45:01.106" level="INFO">Selecting options from selection list '//select[@id='EVCMapEvcName']' by label VLAN1000:1000.</msg>
+<status status="PASS" starttime="20240411 19:45:01.106" endtime="20240411 19:45:01.201"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240411 19:45:02.210" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240411 19:45:01.201" endtime="20240411 19:45:02.210"/>
+</kw>
+<kw name="Select From List By Label" library="selen">
+<arg>//select[@id='EVCMapCTagVLANID']</arg>
+<arg>${C_Tag}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20240411 19:45:02.210" level="INFO">Selecting options from selection list '//select[@id='EVCMapCTagVLANID']' by label 1302.</msg>
+<status status="PASS" starttime="20240411 19:45:02.210" endtime="20240411 19:45:02.318"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240411 19:45:03.318" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240411 19:45:02.318" endtime="20240411 19:45:03.318"/>
+</kw>
+<kw name="Select From List By Label" library="selen">
+<arg>//select[@id='EVCMapDHCPProcess']</arg>
+<arg>${DHCP_Processing}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20240411 19:45:03.318" level="INFO">Selecting options from selection list '//select[@id='EVCMapDHCPProcess']' by label Block.</msg>
+<status status="PASS" starttime="20240411 19:45:03.318" endtime="20240411 19:45:03.396"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240411 19:45:04.397" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240411 19:45:03.396" endtime="20240411 19:45:04.397"/>
+</kw>
+<kw name="Select From List By Label" library="selen">
+<arg>//select[@id='EVCMapPPPoEProcess']</arg>
+<arg>${PPPoE_Processing}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20240411 19:45:04.397" level="INFO">Selecting options from selection list '//select[@id='EVCMapPPPoEProcess']' by label Authenticate.</msg>
+<status status="PASS" starttime="20240411 19:45:04.397" endtime="20240411 19:45:04.475"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240411 19:45:05.492" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240411 19:45:04.475" endtime="20240411 19:45:05.492"/>
+</kw>
+<kw name="Click Element" library="selen">
+<arg>//input[@id='EVCMap_ApplyBtn']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240411 19:45:05.492" level="INFO">Clicking element '//input[@id='EVCMap_ApplyBtn']'.</msg>
+<status status="PASS" starttime="20240411 19:45:05.492" endtime="20240411 19:45:05.570"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240411 19:45:10.578" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240411 19:45:05.570" endtime="20240411 19:45:10.578"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n Complete Adtran configure</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20240411 19:45:10.579" endtime="20240411 19:45:10.580"/>
+</kw>
+<kw name="Close Browser" library="selen">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240411 19:45:10.580" endtime="20240411 19:45:12.772"/>
+</kw>
+<status status="PASS" starttime="20240411 19:43:45.976" endtime="20240411 19:45:12.773"/>
+</kw>
+<status status="PASS" starttime="20240411 19:43:45.976" endtime="20240411 19:45:12.773"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240411 19:45:15.787" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240411 19:45:12.774" endtime="20240411 19:45:15.787"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>RG_LAPTOP_CALL</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="RG_LAPTOP_CALL" library="Action_keywords">
+<kw name="Open Connection" library="SSH">
+<var>${session}</var>
+<arg>${RG_host}</arg>
+<arg>alias=${alias}</arg>
+<doc>Opens a new SSH connection to the given ``host`` and ``port``.</doc>
+<msg timestamp="20240411 19:45:15.791" level="INFO">${session} = 1</msg>
+<status status="PASS" starttime="20240411 19:45:15.791" endtime="20240411 19:45:15.791"/>
+</kw>
+<kw name="Enable Ssh Logging" library="SSH">
+<arg>mySSHlogFile.log</arg>
+<doc>Enables logging of SSH protocol output to given ``logfile``.</doc>
+<msg timestamp="20240411 19:45:15.791" level="INFO" html="true">SSH log is written to &lt;a href="mySSHlogFile.log"&gt;file&lt;/a&gt;.</msg>
+<status status="PASS" starttime="20240411 19:45:15.791" endtime="20240411 19:45:15.791"/>
+</kw>
+<kw name="Login" library="SSH">
+<arg>${RG_username}</arg>
+<arg>${RG_password}</arg>
+<arg>delay=1</arg>
+<doc>Logs into the SSH server with the given ``username`` and ``password``.</doc>
+<msg timestamp="20240411 19:45:15.791" level="INFO">Logging into '10.177.173.169:22' as 'homedemo06@outlook.com'.</msg>
+<msg timestamp="20240411 19:45:18.812" level="INFO">Read output: [2J[m[HMicrosoft Windows [Version 10.0.19045.4239]]0;C:\Windows\system32\conhost.exe[?25h
+(c) Microsoft Corporation. All rights reserved.
+[47X
+homed@DESKTOP-K9E9TM0 C:\Users\homed&gt;[10X]0;Administrator: C:\Windows\system32\conhost.exe</msg>
+<status status="PASS" starttime="20240411 19:45:15.791" endtime="20240411 19:45:18.812"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240411 19:45:20.834" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240411 19:45:18.812" endtime="20240411 19:45:20.834"/>
+</kw>
+<kw name="Execute Command" library="SSH">
+<var>${stdoutput}</var>
+<arg>robot -d C:/Users/homeD/Desktop/DSL/Log_Folder -l RG_log.html -r RG_report.html -o RG_output.xml C:/Users/homeD/Desktop/DSL/RG_laptop.robot</arg>
+<doc>Executes ``command`` on the remote machine and returns its outputs.</doc>
+<msg timestamp="20240411 19:45:20.834" level="INFO">Executing command 'robot -d C:/Users/homeD/Desktop/DSL/Log_Folder -l RG_log.html -r RG_report.html -o RG_output.xml C:/Users/homeD/Desktop/DSL/RG_laptop.robot'.</msg>
+<msg timestamp="20240411 19:46:26.724" level="INFO">Command exited with return code 1.</msg>
+<msg timestamp="20240411 19:46:26.724" level="INFO">${stdoutput} = ==============================================================================
+RG laptop                                                                     
+========================================...</msg>
+<status status="PASS" starttime="20240411 19:45:20.834" endtime="20240411 19:46:26.724"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Should Not Contain Any</arg>
+<arg>${stdoutput}</arg>
+<arg>Error</arg>
+<arg>FAIL</arg>
+<arg>msg= Fail at RG_Laptop log</arg>
+<arg>ignore_case=True</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Should Not Contain Any" library="BuiltIn">
+<arg>${stdoutput}</arg>
+<arg>Error</arg>
+<arg>FAIL</arg>
+<arg>msg= Fail at RG_Laptop log</arg>
+<arg>ignore_case=True</arg>
+<doc>Fails if ``container`` contains one or more of the ``*items``.</doc>
+<msg timestamp="20240411 19:46:26.725" level="FAIL"> Fail at RG_Laptop log: '==============================================================================
+RG laptop                                                                     
+==============================================================================
+WAN Connection Test                                                   | FAIL |
+Several failures occurred:
+
+1) Element '//*[@id="head-container"]/div/div[3]/div[1]/div[1]/div[2]/span' should have contained text 'Connected' but its text was 'Disconnected'.
+
+2) Element '//*[@id="head-container"]/div/div[3]/div[1]/div[2]/div/span' should have contained text 'PPPOE' but its text was 'DETECTING'.
+
+3) Element '//*[@id="xdsl-table"]/tbody/tr[3]/td' should have contained text 'G_992_5_ANNEX_A' but its text was 'G_992_1_ANNEX_A'.
+
+4) Element with locator '//option[contains(text(),'Miami')]' not found.
+------------------------------------------------------------------------------
+RG laptop                                                             | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Users\homeD\Desktop\DSL\Log_Folder\RG_output.xml
+Log:     C:\Users\homeD\Desktop\DSL\Log_Folder\RG_log.html
+Report:  C:\Users\homeD\Desktop\DSL\Log_Folder\RG_report.html' contains one or more of 'error' or 'fail'</msg>
+<status status="FAIL" starttime="20240411 19:46:26.724" endtime="20240411 19:46:26.725"/>
+</kw>
+<status status="FAIL" starttime="20240411 19:46:26.724" endtime="20240411 19:46:26.725"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${runStatus}</var>
+<arg>Should Not Contain Any</arg>
+<arg>${stdoutput}</arg>
+<arg>Error</arg>
+<arg>FAIL</arg>
+<arg>msg= Fail at RG_Laptop log</arg>
+<arg>ignore_case=True</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Should Not Contain Any" library="BuiltIn">
+<arg>${stdoutput}</arg>
+<arg>Error</arg>
+<arg>FAIL</arg>
+<arg>msg= Fail at RG_Laptop log</arg>
+<arg>ignore_case=True</arg>
+<doc>Fails if ``container`` contains one or more of the ``*items``.</doc>
+<msg timestamp="20240411 19:46:26.726" level="FAIL"> Fail at RG_Laptop log: '==============================================================================
+RG laptop                                                                     
+==============================================================================
+WAN Connection Test                                                   | FAIL |
+Several failures occurred:
+
+1) Element '//*[@id="head-container"]/div/div[3]/div[1]/div[1]/div[2]/span' should have contained text 'Connected' but its text was 'Disconnected'.
+
+2) Element '//*[@id="head-container"]/div/div[3]/div[1]/div[2]/div/span' should have contained text 'PPPOE' but its text was 'DETECTING'.
+
+3) Element '//*[@id="xdsl-table"]/tbody/tr[3]/td' should have contained text 'G_992_5_ANNEX_A' but its text was 'G_992_1_ANNEX_A'.
+
+4) Element with locator '//option[contains(text(),'Miami')]' not found.
+------------------------------------------------------------------------------
+RG laptop                                                             | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Users\homeD\Desktop\DSL\Log_Folder\RG_output.xml
+Log:     C:\Users\homeD\Desktop\DSL\Log_Folder\RG_log.html
+Report:  C:\Users\homeD\Desktop\DSL\Log_Folder\RG_report.html' contains one or more of 'error' or 'fail'</msg>
+<status status="FAIL" starttime="20240411 19:46:26.726" endtime="20240411 19:46:26.726"/>
+</kw>
+<msg timestamp="20240411 19:46:26.726" level="INFO">${runStatus} = False</msg>
+<status status="PASS" starttime="20240411 19:46:26.726" endtime="20240411 19:46:26.726"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n RG LAPTOP LOG STATUS: ${runStatus}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20240411 19:46:26.726" endtime="20240411 19:46:26.727"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240411 19:46:28.735" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240411 19:46:26.727" endtime="20240411 19:46:28.735"/>
+</kw>
+<kw name="List Files In Directory" library="SSH">
+<var>${Remote_folder_files}</var>
+<arg>${remote_log_folder}</arg>
+<doc>A wrapper for `List Directory` that returns only files.</doc>
+<msg timestamp="20240411 19:46:28.966" level="INFO">[chan 2] Opened sftp connection (server version 3)</msg>
+<msg timestamp="20240411 19:46:29.394" level="INFO">6 files:
+RG_log.html
+RG_output.xml
+RG_report.html
+SpeedTest.png
+Statistic.png
+wanConn.png</msg>
+<msg timestamp="20240411 19:46:29.395" level="INFO">${Remote_folder_files} = ['RG_log.html', 'RG_output.xml', 'RG_report.html', 'SpeedTest.png', 'Statistic.png', 'wanConn.png']</msg>
+<status status="PASS" starttime="20240411 19:46:28.735" endtime="20240411 19:46:29.395"/>
+</kw>
+<for flavor="IN">
+<var>${file}</var>
+<value>@{Remote_folder_files}</value>
+<iter>
+<var name="${file}">RG_log.html</var>
+<kw name="Get File" library="SSH">
+<arg>${remote_log_folder}/${file}</arg>
+<arg>${local_log_folder}/${file}</arg>
+<doc>Downloads file(s) from the remote machine to the local machine.</doc>
+<msg timestamp="20240411 19:46:31.121" level="INFO">'C:/Users/homeD/Desktop/DSL/Log_Folder/RG_log.html' -&gt; 'C:\Users\FrankOs\Desktop\CPE_Access\TestFolder\ADSL2+_Test\ResourceFolder\TC272LogFolder\RG_log.html'</msg>
+<status status="PASS" starttime="20240411 19:46:29.396" endtime="20240411 19:46:31.121"/>
+</kw>
+<status status="PASS" starttime="20240411 19:46:29.396" endtime="20240411 19:46:31.121"/>
+</iter>
+<iter>
+<var name="${file}">RG_output.xml</var>
+<kw name="Get File" library="SSH">
+<arg>${remote_log_folder}/${file}</arg>
+<arg>${local_log_folder}/${file}</arg>
+<doc>Downloads file(s) from the remote machine to the local machine.</doc>
+<msg timestamp="20240411 19:46:31.396" level="INFO">'C:/Users/homeD/Desktop/DSL/Log_Folder/RG_output.xml' -&gt; 'C:\Users\FrankOs\Desktop\CPE_Access\TestFolder\ADSL2+_Test\ResourceFolder\TC272LogFolder\RG_output.xml'</msg>
+<status status="PASS" starttime="20240411 19:46:31.122" endtime="20240411 19:46:31.396"/>
+</kw>
+<status status="PASS" starttime="20240411 19:46:31.121" endtime="20240411 19:46:31.396"/>
+</iter>
+<iter>
+<var name="${file}">RG_report.html</var>
+<kw name="Get File" library="SSH">
+<arg>${remote_log_folder}/${file}</arg>
+<arg>${local_log_folder}/${file}</arg>
+<doc>Downloads file(s) from the remote machine to the local machine.</doc>
+<msg timestamp="20240411 19:46:32.837" level="INFO">'C:/Users/homeD/Desktop/DSL/Log_Folder/RG_report.html' -&gt; 'C:\Users\FrankOs\Desktop\CPE_Access\TestFolder\ADSL2+_Test\ResourceFolder\TC272LogFolder\RG_report.html'</msg>
+<status status="PASS" starttime="20240411 19:46:31.397" endtime="20240411 19:46:32.837"/>
+</kw>
+<status status="PASS" starttime="20240411 19:46:31.397" endtime="20240411 19:46:32.837"/>
+</iter>
+<iter>
+<var name="${file}">SpeedTest.png</var>
+<kw name="Get File" library="SSH">
+<arg>${remote_log_folder}/${file}</arg>
+<arg>${local_log_folder}/${file}</arg>
+<doc>Downloads file(s) from the remote machine to the local machine.</doc>
+<msg timestamp="20240411 19:46:33.132" level="INFO">'C:/Users/homeD/Desktop/DSL/Log_Folder/SpeedTest.png' -&gt; 'C:\Users\FrankOs\Desktop\CPE_Access\TestFolder\ADSL2+_Test\ResourceFolder\TC272LogFolder\SpeedTest.png'</msg>
+<status status="PASS" starttime="20240411 19:46:32.837" endtime="20240411 19:46:33.132"/>
+</kw>
+<status status="PASS" starttime="20240411 19:46:32.837" endtime="20240411 19:46:33.132"/>
+</iter>
+<iter>
+<var name="${file}">Statistic.png</var>
+<kw name="Get File" library="SSH">
+<arg>${remote_log_folder}/${file}</arg>
+<arg>${local_log_folder}/${file}</arg>
+<doc>Downloads file(s) from the remote machine to the local machine.</doc>
+<msg timestamp="20240411 19:46:33.448" level="INFO">'C:/Users/homeD/Desktop/DSL/Log_Folder/Statistic.png' -&gt; 'C:\Users\FrankOs\Desktop\CPE_Access\TestFolder\ADSL2+_Test\ResourceFolder\TC272LogFolder\Statistic.png'</msg>
+<status status="PASS" starttime="20240411 19:46:33.133" endtime="20240411 19:46:33.448"/>
+</kw>
+<status status="PASS" starttime="20240411 19:46:33.133" endtime="20240411 19:46:33.448"/>
+</iter>
+<iter>
+<var name="${file}">wanConn.png</var>
+<kw name="Get File" library="SSH">
+<arg>${remote_log_folder}/${file}</arg>
+<arg>${local_log_folder}/${file}</arg>
+<doc>Downloads file(s) from the remote machine to the local machine.</doc>
+<msg timestamp="20240411 19:46:33.812" level="INFO">'C:/Users/homeD/Desktop/DSL/Log_Folder/wanConn.png' -&gt; 'C:\Users\FrankOs\Desktop\CPE_Access\TestFolder\ADSL2+_Test\ResourceFolder\TC272LogFolder\wanConn.png'</msg>
+<status status="PASS" starttime="20240411 19:46:33.449" endtime="20240411 19:46:33.813"/>
+</kw>
+<status status="PASS" starttime="20240411 19:46:33.449" endtime="20240411 19:46:33.813"/>
+</iter>
+<status status="PASS" starttime="20240411 19:46:29.395" endtime="20240411 19:46:33.813"/>
+</for>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240411 19:46:38.829" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240411 19:46:33.814" endtime="20240411 19:46:38.829"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${XML_FILE_PATH}</var>
+<arg>C:/Users/FrankOs/Desktop/RG_Laptop_log/output.xml</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240411 19:46:38.831" level="INFO">${XML_FILE_PATH} = C:/Users/FrankOs/Desktop/RG_Laptop_log/output.xml</msg>
+<status status="PASS" starttime="20240411 19:46:38.830" endtime="20240411 19:46:38.831"/>
+</kw>
+<kw name="Get File" library="OperatingSystem">
+<var>${xml_file}</var>
+<arg>${XML_FILE_PATH}</arg>
+<doc>Returns the contents of a specified file.</doc>
+<msg timestamp="20240411 19:46:38.832" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\FrankOs\Desktop\RG_Laptop_log\output.xml"&gt;C:\Users\FrankOs\Desktop\RG_Laptop_log\output.xml&lt;/a&gt;'.</msg>
+<msg timestamp="20240411 19:46:38.834" level="INFO">${xml_file} = &lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;robot generator="Robot 7.0 (Python 3.9.13 on win32)" generated="2024-04-02T11:59:58.807334" rpa="false" schemaversion="5"&gt;
+&lt;suite id="s1" name="RG laptop" sourc...</msg>
+<status status="PASS" starttime="20240411 19:46:38.831" endtime="20240411 19:46:38.834"/>
+</kw>
+<kw name="Parse Xml" library="xml">
+<var>${xml_content}</var>
+<arg>${xml_file}</arg>
+<doc>Parses the given XML file or string into an element structure.</doc>
+<msg timestamp="20240411 19:46:38.839" level="INFO">${xml_content} = &lt;Element 'robot' at 0x0000024C8143B720&gt;</msg>
+<status status="PASS" starttime="20240411 19:46:38.835" endtime="20240411 19:46:38.839"/>
+</kw>
+<kw name="Get Element" library="xml">
+<var>${stat_element}</var>
+<arg>${xml_content}</arg>
+<arg>xpath=.//statistics/suite/stat[@name='RG laptop']</arg>
+<doc>Returns an element in the ``source`` matching the ``xpath``.</doc>
+<msg timestamp="20240411 19:46:38.841" level="INFO">${stat_element} = &lt;Element 'stat' at 0x0000024C81451A90&gt;</msg>
+<status status="PASS" starttime="20240411 19:46:38.840" endtime="20240411 19:46:38.842"/>
+</kw>
+<kw name="Get Element Attribute" library="xml">
+<var>${pass_count}</var>
+<arg>${stat_element}</arg>
+<arg>pass</arg>
+<doc>Returns the named attribute of the specified element.</doc>
+<msg timestamp="20240411 19:46:38.843" level="INFO">${pass_count} = 1</msg>
+<status status="PASS" starttime="20240411 19:46:38.842" endtime="20240411 19:46:38.843"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\nPass\= ${pass_count}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20240411 19:46:38.844" endtime="20240411 19:46:38.846"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Should Be True</arg>
+<arg>${pass_count} &gt; 0</arg>
+<arg>msg:Test FAIL at RG laptop</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Should Be True" library="BuiltIn">
+<arg>${pass_count} &gt; 0</arg>
+<arg>msg:Test FAIL at RG laptop</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" starttime="20240411 19:46:38.848" endtime="20240411 19:46:38.849"/>
+</kw>
+<status status="PASS" starttime="20240411 19:46:38.847" endtime="20240411 19:46:38.849"/>
+</kw>
+<kw name="Close All Connections" library="SSH">
+<doc>Closes all open connections.</doc>
+<status status="PASS" starttime="20240411 19:46:38.849" endtime="20240411 19:46:38.852"/>
+</kw>
+<status status="FAIL" starttime="20240411 19:45:15.787" endtime="20240411 19:46:38.855"/>
+</kw>
+<status status="FAIL" starttime="20240411 19:45:15.787" endtime="20240411 19:46:38.856"/>
+</kw>
+<status status="FAIL" starttime="20240411 19:43:45.975" endtime="20240411 19:46:38.859"> Fail at RG_Laptop log: '==============================================================================
+RG laptop                                                                     
+==============================================================================
+WAN Connection Test                                                   | FAIL |
+Several failures occurred:
+
+1) Element '//*[@id="head-container"]/div/div[3]/div[1]/div[1]/div[2]/span' should have contained text 'Connected' but its text was 'Disconnected'.
+
+2) Element '//*[@id="head-container"]/div/div[3]/div[1]/div[2]/div/span' should have contained text 'PPPOE' but its text was 'DETECTING'.
+
+3) Element '//*[@id="xdsl-table"]/tbody/tr[3]/td' should have contained text 'G_992_5_ANNEX_A' but its text was 'G_992_1_ANNEX_A'.
+
+4) Element with locator '//option[contains(text(),'Miami')]' not found.
+------------------------------------------------------------------------------
+RG laptop                                                             | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Users\homeD\Desktop\DSL\Log_Folder\RG_output.xml
+Log:     C:\Users\homeD\Desktop\DSL\Log_Folder\RG_log.html
+Report:  C:\Users\homeD\Desktop\DSL\Log_Folder\RG_report.html' contains one or more of 'error' or 'fail'</status>
+</test>
+<status status="FAIL" starttime="20240411 19:43:45.362" endtime="20240411 19:46:38.869"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="TC272">TC272</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
