@@ -56,4 +56,4 @@ Run All scripts
 
 ###### Add this to Test Sentinel "SendLine" python call to execute RG laptop RF scripts
 ##  robot -d C:/Users/homeD/Desktop/DSL/Log_Folder -l RG_log.html -r RG_report.html -o RG_output.xml C:/Users/homeD/Desktop/DSL/RG_laptop.robot 
-##  robot -d ResourceFolder/TC272LogFolder TC272.robot    #####
+##  robot -d ResourceFolder/TC272LogFolder TC272.robot    ###
